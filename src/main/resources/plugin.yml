@@ -1,0 +1,5 @@
+name: Party
+version: 1.0.0
+main: org.cbplugins.party.Party
+author: CBPlugins
+description: Party Plugin

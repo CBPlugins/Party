@@ -1,0 +1,5 @@
+MaxPerParty: 5
+
+ExcludedServers:
+  - 'lobby'
+  - 'others'

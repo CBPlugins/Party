@@ -1,0 +1,75 @@
+Prefix: '&8[&5PARTY&8] &r'
+Party-Chat-Format: '&8[&aCHAT&8] %player%&7: &b%message%'
+
+Party-Invite: '&bYou are invited into &6%player%s &bparty.'
+Party-Join-Help: '&bJoin the party with &8/&5party join &6%leader%'
+
+Party-Invitation-Expired: '&bYour invitation has been expired.'
+Invitation-Expired: '&bYour invitation to &6%player% &bhas been expired.'
+
+Party-Left-Leader: '&bThe leader has left the party. The Party was dissolved.'
+Party-Left-Player: '&bThe player &6%player% &bhas left the party.'
+
+Party-Switch-Server: '&bThe party joined the server &6%server%'
+
+Commands:
+  MustBePlayer: 'You have to be a player'
+
+  Header: '&8&m----------[&5&lPARTY&8]&m----------'
+  Footer: '&8&m-----------------------------------'
+  Format: '&8/&5party &5%aliases% &5%usage% &8- &7%message%'
+
+  NotExists: '&cThat &ccommand &cdoes &cnot &cexist'
+
+  Create:
+    Help: '&7Create &7a &7party'
+    AlreadyInParty: '&cYou &care &calready &cin &ca &cparty'
+    Created: '&bYou &bcreated &ba &bnew &bparty'
+
+  Invite:
+    Help: '&7Invite &7a &7player &7in &7your &7party'
+    Usage: '&7<Name>'
+    NoPlayer: '&cPlease &center &ca &cplayers &cname'
+    NoParty: '&cYou &care &cnot &cin &ca &cparty'
+    NotLeader: '&cYou &care &cnot &cthe &cparty &cleader'
+    NotOnline: '&cThat &cplayer &cis &cnot &conline'
+    Invited: '&bYou &binvited &6%player% &bto &byour &bparty'
+
+  Join:
+    Help: '&7Join &7a &7party'
+    Usage: '&7<Name>'
+    NoPlayer: '&cPlease &center &ca &cplayers &cname'
+    AlreadyInParty: '&cYou &care &calready &cin &ca &cparty. &cType &8/&6party &6leave &cto &cleave &cthe &cparty'
+    NotOnline: '&cThat &cplayer &cis &cnot &conline'
+    NoParty: '&cThat &cplayer &chas &cno &cparty'
+    Joined: '&bThe &bplayer &6%player% &bjoined &bthe &bparty'
+    Error: '&cYou &ccould &cnot &cjoin &cthe &cparty'
+
+  Kick:
+    Help: '&7Kick &7a &7player &7from &7your &7party'
+    Usage: '&7<Name>'
+    NoPlayer: '&cPlease &center &ca &cplayers &cname'
+    NoParty: '&cYou &care &cnot &cin &ca &cparty'
+    NotLeader: '&cYou &care &cnot &cthe &cparty &cleader'
+    NotOnline: '&cThat &cplayer &cis &cnot &conline'
+    Kicked: '&bYou &bkicked &bthe &bplayer &6%player% &bout &bof &byour &bparty'
+    Player-Kicked: '&bThe &bplayer &6%player% &bhas &bbeen &bkicked &bout &bof &bthe &bparty'
+    Kick: '&bYou &bwere &bkicked &bout &bof &bthe &bparty'
+    Error: '&cYou &ccould &cnot &ckick &cthat &cplayer &cout &cof &cyour &cparty'
+
+  Leave:
+    Help: '&7Leave &7your &7party'
+    NoParty: '&cYou &care &cnot &cin &ca &cparty'
+    Dissolved: '&bThe &bleader &bhas &bdissolved &bthe &bparty'
+    Dissolve: '&bYou &bhave &bdissolved &byour &bparty'
+    Leave: '&bYou &bleft &bthe &bparty'
+    Left: '&bThe &bplayer &6%player% &bhas &bleft &bthe &bparty'
+    Error: '&cYou &ccould &cnot &cleave &cthe &cparty'
+
+  List:
+    Help: '&7List &7all &7players &7in &7your &7party'
+    NoParty: '&cYou &care &cnot &cin &ca &cparty'
+    Header: '&8&m----------[&5&lPARTY&8]&m----------'
+    Leader: '&3Leader&7: &5%leader%'
+    Players: '&8Players&7: &b%player%'
+    Footer: '&8&m-----------------------------------'
