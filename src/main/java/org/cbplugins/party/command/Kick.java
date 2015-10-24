@@ -1,7 +1,5 @@
 package org.cbplugins.party.command;
 
-import net.md_5.bungee.BungeeCord;
-import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import org.cbplugins.party.Party;
@@ -34,7 +32,7 @@ public class Kick extends SubCommand {
 			return;
 		}
 		
-		ProxiedPlayer pl = BungeeCord.getInstance().getPlayer(args[0]);
+		ProxiedPlayer pl = Party.getInstance().getProxy().getPlayer(args[0]);
 		
 		if(pl == null) {
 			p.sendMessage(Party.getMessageManager().getString("Commands.Kick.NotOnline"));
@@ -47,10 +45,8 @@ public class Kick extends SubCommand {
 				pp.sendMessage(Party.getMessageManager().getString("Commands.Kick.Player-Kicked", Arrays.asList("%player%"), Arrays.asList(pl.getName())));
 			}
 			pl.sendMessage(Party.getMessageManager().getString("Commands.Kick.Kick"));
-			return;
 		}else {
 			p.sendMessage(Party.getMessageManager().getString("Commands.Kick.Error"));
-			return;
 		}
 	}
 

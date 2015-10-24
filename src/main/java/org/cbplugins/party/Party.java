@@ -1,6 +1,5 @@
 package org.cbplugins.party;
 
-import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.plugin.Plugin;
 import org.cbplugins.party.command.PartyCommand;
 import org.cbplugins.party.config.Config;
@@ -36,13 +35,13 @@ public class Party extends Plugin {
 	@Override
 	public void onEnable() {
 		instance = this;
-		config = new Config("config", this);
-		messages = new Config("messages", this);
-		messageManager = new MessageManager(messages);
-		BungeeCord.getInstance().getPluginManager().registerCommand(this, new PartyCommand());
-		BungeeCord.getInstance().getPluginManager().registerListener(this, new PlayerChatListener());
-		BungeeCord.getInstance().getPluginManager().registerListener(this, new PlayerDisconnectListener());
-		BungeeCord.getInstance().getPluginManager().registerListener(this, new ServerSwitchListener());
+		config = new Config( "config", this );
+		messages = new Config( "messages", this );
+		messageManager = new MessageManager( messages );
+		getProxy().getPluginManager().registerCommand( this, new PartyCommand() );
+		getProxy().getPluginManager().registerListener( this, new PlayerChatListener() );
+		getProxy().getPluginManager().registerListener( this, new PlayerDisconnectListener() );
+		getProxy().getPluginManager().registerListener( this, new ServerSwitchListener() );
 	}
 
 	/**
@@ -50,7 +49,7 @@ public class Party extends Plugin {
 	 */
 	@Override
 	public void onDisable() {
-		
+		config.saveConfig();
 	}
 
 	public static Config getConfig() {

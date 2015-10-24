@@ -71,5 +71,5 @@ Commands:
     NoParty: '&cYou &care &cnot &cin &ca &cparty'
     Header: '&8&m----------[&5&lPARTY&8]&m----------'
     Leader: '&3Leader&7: &5%leader%'
-    Players: '&8Players&7: &b%player%'
+    Players: '&8Players&7: &b%players%'
     Footer: '&8&m-----------------------------------'

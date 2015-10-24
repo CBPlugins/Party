@@ -23,12 +23,16 @@ public class Config {
 
     public void createIfNotExists() {
         if(!plugin.getDataFolder().exists()) {
-            plugin.getDataFolder().mkdir();
+            if(!plugin.getDataFolder().mkdir()) {
+                Party.getInstance().getLogger().warning("Could not create data folder. Please double check your file system permissions.");
+            }
         }
         File file = new File(plugin.getDataFolder(), name + ".yml");
         if(!file.exists()) {
             try {
-                file.createNewFile();
+                if(!file.createNewFile()) {
+                    Party.getInstance().getLogger().warning("Could not create config file. Please double check your file system permissions.");
+                }
                 FileWriter out = new FileWriter(file);
                 InputStream is = Party.class.getResourceAsStream("/" + name + ".yml");
                 InputStreamReader isr = new InputStreamReader(is);

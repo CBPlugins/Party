@@ -28,7 +28,6 @@ public class Leave extends SubCommand {
 			}
 			p.sendMessage(Party.getMessageManager().getString("Commands.Leave.Dissolve"));
 			PartyManager.deleteParty(party);
-			return;
 		}else {
 			if(party.removePlayer(p)) {
 				p.sendMessage(Party.getMessageManager().getString("Commands.Leave.Leave"));
@@ -36,10 +35,8 @@ public class Leave extends SubCommand {
 					pp.sendMessage(Party.getMessageManager().getString("Commands.Leave.Left", Arrays.asList("%player%"), Arrays.asList(p.getName())));
 				}
 				party.getLeader().sendMessage(Party.getMessageManager().getString("Commands.Leave.Left", Arrays.asList("%player%"), Arrays.asList(p.getName())));
-				return;
 			}else {
 				p.sendMessage(Party.getMessageManager().getString("Commands.Leave.Error"));
-				return;
 			}
 		}
 	}

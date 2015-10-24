@@ -4,7 +4,6 @@ import org.cbplugins.party.Party;
 import org.cbplugins.party.PartyManager;
 import org.cbplugins.party.PlayerParty;
 
-import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.Arrays;
@@ -33,7 +32,7 @@ public class Invite extends SubCommand {
 			return;
 		}
 		
-		ProxiedPlayer pl = BungeeCord.getInstance().getPlayer(args[0]);
+		ProxiedPlayer pl = Party.getInstance().getProxy().getPlayer(args[0]);
 		
 		if(pl == null) {
 			p.sendMessage(Party.getMessageManager().getString("Commands.Invite.NotOnline"));

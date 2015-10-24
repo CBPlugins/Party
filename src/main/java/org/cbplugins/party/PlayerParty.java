@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
@@ -72,7 +71,7 @@ public class PlayerParty {
 		invitations.add(p);
 		p.sendMessage(Party.getMessageManager().getString("Party-Invite", Arrays.asList("%player%"), Arrays.asList(leader.getName())));
 		p.sendMessage(Party.getMessageManager().getString("Party-Join-Help", Arrays.asList("%leader%"), Arrays.asList(getLeader().getName())));
-		BungeeCord.getInstance().getScheduler().schedule(Party.getInstance(), new Runnable() {
+		Party.getInstance().getProxy().getScheduler().schedule(Party.getInstance(), new Runnable() {
 			public void run() {
 				if(invitations.contains(p)) {
 					invitations.remove(p);

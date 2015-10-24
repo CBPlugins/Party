@@ -56,7 +56,6 @@ public class PartyCommand extends Command {
 		args = a.toArray(new String[a.size()]);
 		
 		sc.onCommand(p, args);
-		return;
 	}
 	
 	private String aliases(SubCommand sc) {

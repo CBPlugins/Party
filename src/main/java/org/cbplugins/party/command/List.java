@@ -24,7 +24,7 @@ public class List extends SubCommand {
 		PlayerParty party = PartyManager.getParty(p);
 		
 		String leader = Party.getMessageManager().getRawString("Commands.List.Leader", Arrays.asList("%leader%"), Arrays.asList(party.getLeader().getName()));
-		String players = Party.getMessageManager().getRawString("Commands.List.Players", Arrays.asList("%player%"), Arrays.asList(""));
+		String players = Party.getMessageManager().getRawString("Commands.List.Players", Arrays.asList("%players%"), Arrays.asList(""));
 		
 		if(!party.getPlayers().isEmpty()) {
 			for(ProxiedPlayer pp : party.getPlayers()) {
@@ -42,7 +42,6 @@ public class List extends SubCommand {
 		p.sendMessage(new TextComponent(players));
 		
 		p.sendMessage(new TextComponent(Party.getMessageManager().getRawString("Commands.List.Footer")));
-		return;
 	}
 
 }
